@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <% @pages.each do |p| %>
   <url>
-    <loc><%= @hostname + encode(p.url).gsub(/\/$/,'') %></loc>
+    <loc><%= @hostname + encode(p.url) %></loc>
 <% if p.data.lastmod %>    <lastmod><%= p.data.lastmod %></lastmod>
 <% end %>
 <% if p.data.changefreq %>    <changefreq><%= p.data.changefreq %></changefreq>
